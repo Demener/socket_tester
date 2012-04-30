@@ -2,8 +2,8 @@ require 'socket'
 
 class SocketTester
   attr_accessor :sock
-  def open_port (hostname='127.0.0.1', port=8081)
-    puts "Opening Host " + hostname + " on Port " + port + "."
+  def open_port (hostname='127.0.0.1', port=2000)
+    puts "Opening Host " + hostname + " on Port " + port.to_s + "."
     @sock= TCPSocket.open(hostname, port)
   end
   
